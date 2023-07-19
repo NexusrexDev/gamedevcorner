@@ -5,7 +5,7 @@ categories: analysis
 ---
 
 # A beginning
-This file is mainly made as a form of guidance for myself after tackling several shmup games (Ranging from simple jam entries in the spirit of simple shmups akin to Space Invaders and 1942 and more advanced shmups) in attempt to understand how a basic enemy unit can be designed, and what cliches can be found in common between said games.
+This file is mainly made as a form of guidance for myself after tackling several shmup games *(Ranging from simple jam entries in the spirit of simple shmups akin to Space Invaders and 1942 and more advanced shmups)* in attempt to understand how a basic enemy unit can be designed, and what cliches can be found in common between said games.
 
 # Let's get into it
 An enemy can be divided into 3 phases:
@@ -17,9 +17,9 @@ An enemy can be divided into 3 phases:
 
 | Name | Description |
 | :-------------: | ------------- |
-| **None** | The enemy simply moves into the scene, getting instantly into the *action* phase. |
-| **Tween to position** | The enemy tweens into a specific position, usually accompanied by being instantiated in other spots of the screen and different types of tweening to provide interesting effects. |
-| **Foreground animation** | The enemy has an animation, usually scaling down if coming from the foreground, disabling its hitbox through the animation. |
+| **None** | The enemy simply moves into the scene, getting instantly into the *action* phase. <br><br> <p align=center>![None animation](../img/intro_none.gif) <br> <sub>*A forward moving enemy, no intro animation*</sub></p> |
+| **Tween to position** | The enemy tweens into a specific position, usually accompanied by being instantiated in other spots of the screen and different types of tweening to provide interesting effects. <br><br> <p align=center>![Tween animation](../img/intro_tween.gif) <br> <sub>*An enemy tweening to position, linear interpolation and easing in-out*</sub></p> |
+| **Foreground animation** | The enemy has an animation, usually scaling down if coming from the foreground, disabling its hitbox through the animation. <br><br> <p align=center>![Foreground animation](../img/intro_foreground.gif) <br> <sub>*An enemy coming from the foreground, done with 2 tweens*</sub></p> |
 | **Teleport** | The enemy has a teleportation animation before being instantiated/spawned in place of the animation. |
 
 ## Action attributes
@@ -32,23 +32,23 @@ The types can be either simultaneous, or focused on one of the types.
 
 | Name | Description |
 | :-------------: | ------------- |
-| **Straight line** | The enemy moves in a straight line. Can be either of a moderate speed, the background’s scrolling speed *(if the enemy is part of the ground/stationary)* or slow to imply heaviness. *(for bullet sponges and bomb-types)* |
+| **Straight line** | The enemy moves in a straight line. Can be either of a moderate speed, the background’s scrolling speed *(if the enemy is part of the ground/stationary)* or slow to imply heaviness. *(for bullet sponges and bomb-types)* <br><br> <p align=center>![Straight line animation](../img/intro_none.gif) <br> <sub>*An enemy moving in a straight line*</sub></p> |
 | **At player** | The enemy moves in the player’s direction, similar speed traits as the straight line variant. |
-| **Sinewave** | The enemy moves in a sine wave vertically while having normal horizontal movement. Multiples can be used to create interesting shapes. *(Wave, reverse sine)* |
-| **Zigzag** | The enemy moves forward then up and back before continuing forward to resemble a zigzag shape. |
+| **Sinewave** | The enemy moves in a sine wave vertically while having normal horizontal movement. Multiples can be used to create interesting shapes. *(Wave, reverse sine)* <br><br> <p align=center>![Sinewave animation](../img/movement_sine.gif) <br> <sub>*Enemies moving in a sine wave, one then multiple*</sub></p> |
+| **Zigzag** | The enemy moves forward then up and back before continuing forward to resemble a zigzag shape. <br><br> <p align=center>![Zigzag animation](../img/movement_zigzag.gif) <br> <sub>*An enemy moving in a downwards zigzag*</sub></p> |
 | **Dash** | The enemy moves in a bigger speed than a regular enemy, usually combined with an intro. |
-| **Repositioning** | The enemy moves around a set of predefined spots. Can be combined with shooting projectiles after moving through such spots or during every movement. |
-| **Hovering** | The enemy moves around the scene slowly, usually used for bigger enemies or bosses to stop them from being completely stationary. |
+| **Repositioning** | The enemy moves around a set of predefined spots. Can be combined with shooting projectiles after moving through such spots or during every movement. <br><br> <p align=center>![Repositioning animation](../img/movement_repositioning.gif) <br> <sub>*An enemy repositioning across various spots, shooting after stopping at selected times*</sub></p> |
+| **Hovering** | The enemy moves around the scene slowly, usually used for bigger enemies or bosses to stop them from being completely stationary. <br><br> <p align=center>![Hovering animation](../img/movement_hover.gif) <br> <sub>*The closest approximation to such a behavior with a small enemy*</sub></p> |
 
 ### Shooting attributes
 
 | Name | Description |
 | :-------------: | ------------- |
-| **Straight line** | The enemy shoots a projectile *(or a cluster)* that moves forward. |
-| **At player** | The enemy shoots a projectile *(or a cluster)* that moves in the player’s direction. |
-| **Spread shot** | The enemy shoots more than one projectile at once, spread to shape an arc. The arc’s main angle can be either a forward line, or in a specific direction. *(ie. the player’s)* |
-| **Spraying** | The enemy scatters multiple projectiles (or clusters) with a brief gap between each projectile, akin to using a machine gun to spray bullets. |
-| **Radial blast** | The enemy shoots projectiles spread in the shape of a circle at once. Changing angles between blasts can provide an interesting challenge *(used in danmakus/bullet hell games)* |
+| **Straight line** | The enemy shoots a projectile *(or a cluster)* that moves forward. <br><br> <p align=center>![Straight shot animation](../img/shooting_straightline.gif) <br> <sub>*An enemy shooting forward*</sub></p> |
+| **At player** | The enemy shoots a projectile *(or a cluster)* that moves in the player’s direction. <br><br> <p align=center>![At player animation](../img/shooting_atplayer.gif) <br> <sub>*An enemy shooting a cluster in the player’s direction*</sub></p> |
+| **Spread shot** | The enemy shoots more than one projectile at once, spread to shape an arc. The arc’s main angle can be either a forward line, or in a specific direction. *(ie. the player’s)* <br><br> <p align=center>![Spread shot animation](../img/shooting_spreadshot.gif) <br> <sub>*An enemy shooting 3 projectiles*</sub></p> |
+| **Spraying** | The enemy scatters multiple projectiles (or clusters) with a brief gap between each projectile, akin to using a machine gun to spray bullets. <br><br> <p align=center>![Spray shot animation](../img/shooting_spraying.gif) <br> <sub>*An enemy spraying 5 projectiles*</sub></p> |
+| **Radial blast** | The enemy shoots projectiles spread in the shape of a circle at once. Changing angles between blasts can provide an interesting challenge *(used in danmakus/bullet hell games)* <br><br> <p align=center>![Radial blast animation](../img/shooting_radialblast.gif) <br> <sub>*An enemy shooting 10 projectiles in a circle*</sub></p> |
 | **Charging <sub>(Special)</sub>** | The enemy takes a moment to charge before blasting multiple shots, one after another. The projectile style can be any of the attributes discussed above. |
 | **Bomb <br><sub>(Special)</sub>** | The enemy triggers the shots like a bomb when killed, usually using a radial blast. |
 
@@ -68,6 +68,7 @@ I played:
 - [ZeroRanger](https://se-made.com/zeroranger.html) (Demo) by System Erasure
 - Lords of Thunder (Sega CD) by Red Entertainment/Hudson Soft
 - Gunbird 1 and 2 (Arcade, Sega Dreamcast) by Psikyo
+
 I watched the playthroughs of:
 - [Star Soldier R](https://www.youtube.com/watch?v=yZRBxNcLQuk) (Wiiware) by Hudson Soft
 - [Darius Twin](https://youtu.be/9OjfHqxdNjA) (SNES) by Taito
