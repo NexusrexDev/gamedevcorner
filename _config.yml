@@ -3,7 +3,8 @@ title: Nexusrex's Gamedev Corner
 description: >-
   A small Github Pages blog to share gamedev-related notes and thoughts.
 show_excerpts: true
-baseurl: /gamedevcorner
+baseurl: "/gamedevcorner"
+url: "https://nexusrexdev.github.io"
 
 # Build settings
 plugins:
