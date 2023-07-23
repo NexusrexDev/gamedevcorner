@@ -1,13 +1,20 @@
 # Site settings
 title: Nexusrex's Gamedev Corner
 description: >-
-  A small Github Pages blog to share gamedev-related notes and thoughts
+  A small Github Pages blog to share gamedev-related notes and thoughts.
+show_excerpts: true
 
 # Build settings
 plugins:
   - jekyll-feed
   - jekyll-sitemap
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
 
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md

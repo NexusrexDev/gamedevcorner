@@ -4,6 +4,24 @@
 $theme: "darkly" !default;
 
 //
+// Custom colors based on Juice56
+//
+
+$j-white: #ffffff !default;
+$j-gray-1: #c8e1eb !default;
+$j-gray-2: #a5becd !default;
+$j-gray-3: #7891a5 !default;
+$j-gray-4: #55647d !default;
+$j-gray-5: #37415a !default;
+$j-gray-6: #191e3c !default;
+$j-black: #000005 !default;
+
+$j-blue-1: #82ffe1 !default;
+$j-blue-2: #41d7d7 !default;
+$j-blue-3: #14a0cd !default;
+$j-blue-4: #1469c3 !default;
+
+//
 // Color system
 //
 
@@ -32,7 +50,7 @@ $cyan:    #3498db !default;
 
 $primary:       $blue !default;
 $secondary:     $gray-700 !default;
-$success:       $green !default;
+$success:       $j-blue-3 !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
@@ -43,8 +61,9 @@ $min-contrast-ratio:   1.9 !default;
 
 // Body
 
-$body-bg:                   $gray-900 !default;
-$body-color:                $white !default;
+$body-bg:                   $j-gray-6 !default;
+$body-color:                $j-white !default;
+$border-color:              $j-gray-4 !default;
 
 // Links
 
@@ -57,11 +76,11 @@ $font-family-sans-serif:      Lato, -apple-system, BlinkMacSystemFont, "Segoe UI
 $h1-font-size:                3rem !default;
 $h2-font-size:                2.5rem !default;
 $h3-font-size:                2rem !default;
-$text-muted:                  $gray-600 !default;
+$text-muted:                  $j-gray-3 !default;
 
 // Tables
 
-$table-border-color:          $gray-700 !default;
+$table-border-color:          $j-gray-4 !default;
 
 $table-bg-scale:              0% !default;
 
@@ -126,7 +145,7 @@ $pagination-disabled-border-color:  transparent !default;
 // Cards
 
 $card-cap-bg:                       $gray-700 !default;
-$card-bg:                           $gray-800 !default;
+$card-bg:                           $j-gray-5 !default;
 
 // Popovers
 

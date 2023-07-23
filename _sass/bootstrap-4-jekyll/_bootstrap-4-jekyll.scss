@@ -1,8 +1,24 @@
 // Some CSS to ease the integration between Jekyll and Bootstrap 4.
 // It is not recommended to edit this file.
 
-/*.page-content {
+.page-content {
     img {
       max-width: 100%;
     }
-  }*/
+  }
+
+.banner {
+  max-width: 100%;
+  max-height: 1024px;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  image-rendering: pixelated;
+}
+
+sub {
+  color: $j-gray-2;
+}

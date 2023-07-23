@@ -10,9 +10,17 @@ layout: default
         {%- assign date_format = "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
+
       {%- if page.author -%}
         • {{ page.author }}
       {%- endif -%}
+      • in {{page.categories[0] | capitalize | escape}}
+
+      {%- if page.image -%}
+      <div>
+        <img src="{{ page.image | relative_url }}">
+      </div>
+      {%- endif %}
     </p>
   </header>
 
