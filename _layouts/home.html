@@ -4,15 +4,15 @@ layout: default
 
 <div>
 
-  {%- if page.title -%}
-  <header>
-    <h1>{{ page.title }}</h1>
+  <header style="text-align: center;">
+    <h1>Welcome to my gamedev corner!</h1>
   </header>
-  {%- endif -%}
 
-  <section>
-    {{ content }}
+  <section style="text-align: center;">
+    This Github Pages site is where I'll attempt to blog anything gamedev-related: Analysis, stuff I'm working on... etc.
   </section>
+
+  <br><br>
 
   {%- if site.posts.size > 0 -%}
     <p class="h4">{{ page.list_title | default: "Posts" }}</p>
