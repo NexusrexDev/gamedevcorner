@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Enemy design in shmups"
+title: "Enemy Design in Shmups"
 categories: analysis
 excerpt: "An attempt to analyze enemy designs from several shmup games and write them down in a detailed manner!"
 ---
